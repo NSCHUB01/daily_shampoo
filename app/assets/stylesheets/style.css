@@ -1,14 +1,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Signika:400,300,600,700);
- 'Signika', sans-serif
-
-@import "../css/reset.css";
-@import "../css/grid.css";
-@import "../css/superfish.css";
-
 
 body {
-  max-width: 60%;
+  max-width: 100%;
+  font-family: 'Signika', sans-serif;
 }
 /*
 
@@ -155,7 +150,6 @@ footer a:hover {
     }*/
     header {
       text-align: center;
-      background: ;
       background-size: cover;
     }
 
@@ -206,9 +200,8 @@ footer a:hover {
 
     img {
       margin: 40px 0px 0px 0px;
-      border: 7px
+      border: 7px;
       border-style: solid;
-      border-color: ;
       border-radius: 20px;
     }
     ul {
@@ -228,7 +221,7 @@ footer a:hover {
       color: purple;
     }
     #posts {
-      margin-bottom: 10px
+      margin-bottom: 10px;
     }
 
     article {
