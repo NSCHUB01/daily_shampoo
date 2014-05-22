@@ -1,0 +1,44 @@
+
+<% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form error!</h2>
+      <ul>
+      <% for message in @user.errors.full_messages %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<h2> New to Daily Shampoo? Sign up Below: </h2>
+
+  <%= form_for @user do |f| %>
+<ul>
+<li>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.text_field :password_confirmation %>
+  </div>
+  <div class="actions"><%= submit_tag "Submit" %></div>
+</li>
+</ul>
+  <h2> Already Shampooing?</h2>
+  <h2> <%= link_to "login", log_in_path %> </h2>
+
+<% end %>

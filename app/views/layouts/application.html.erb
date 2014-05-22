@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <header>
+    <title> Daily Shampoo </title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </header>
+
+
+  <body>
+
+    <h1>Daily Shampoo</h1>
+    <h4>View, Rinse, Repeat. Contact with Eyes May Sometimes Sting...</h4>
+
+    <div id="user_nav">
+      <% if current_user %>
+    <h5>Logged in as <%= current_user.email %></h5>
+      <ul>
+       <li><%= link_to "All Posts", user_posts_path(current_user) %></li>
+       <li><%= link_to "Create New Post", new_user_post_path(current_user) %></li>
+       <li><%= link_to "Contact Us", root_path %></li>
+       <li><%= link_to "Log out", log_out_path %></li>
+      <% else %>
+       <h5><%= link_to "Sign up", sign_up_path %> or <%= link_to "Log in", log_in_path %></h5>
+     </ul>
+      <% end %>
+    </div>
+
+  <%= yield %>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+
+<h2> Create New Post: </h2>
+
+  <%= form_for @post, url: user_posts_path(@user), method: "POST" do |f| %>
+
+<ul>
+  <div id="post_title">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div id="post_description">
+    <%= f.label :description %>
+    <%= f.text_area    :description %>
+  </div>
+  <div id="post_image">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </div>
+  <div id="post_image_file">
+    <%= f.label :image_file %>
+    <%= f.file_field :image_file %>
+  </div>
+  <div class="actions"><%= submit_tag "Submit" %></div>
+</ul>
+<% end %>
