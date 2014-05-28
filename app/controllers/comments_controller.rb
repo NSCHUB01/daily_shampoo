@@ -1,21 +1,21 @@
 class CommentsController < ApplicationController
 
-def show
-  @comment = Comment.find(params[:id])
-end
+  def show
+    @comment = Comment.find(params[:id])
+  end
 
-def create
-  Comment.create(comment_params)
+  def create
+    Comment.create(comment_params)
 
-  redirect to
+    redirect to
 
-end
+  end
 
-private
+  private
 
-def response_params
-  params.require(:comment).permit(:)
-end
+  def response_params
+    params.require(:comment).permit(:)
+  end
 
 
 end
